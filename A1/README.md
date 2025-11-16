@@ -1,4 +1,6 @@
-# Метод Монте-Карло: широкая vs узкая область генерации точек
+## ID посылки: 349255294
+
+# Метод Монте-Карло
 
 ## Файлы
 
@@ -31,3 +33,4 @@
 ![alt text](https://github.com/vputt/set3/blob/6c6b4a22b89f8fdade349cf55f11c013557836bf/A1/graph2.png)
 ![alt text](https://github.com/vputt/set3/blob/6c6b4a22b89f8fdade349cf55f11c013557836bf/A1/graph3.png)
 ![alt text](https://github.com/vputt/set3/blob/6c6b4a22b89f8fdade349cf55f11c013557836bf/A1/graph4.png)
+
