@@ -262,6 +262,8 @@ public:
 - На случайных массивах алгоритм медленнее всего(слияние треубет большего кол-ва операций)
 - Для критичных по производительности приложений рекомендуется использовать гибридную реализацию с threshold = 20
 
-![alt text](https://github.com/vputt/set3/blob/f900a492437606277c4f574acc1d8bae0b2670e5/A2/mrgSortVShybrid.png)
+![alt text](https://github.com/vputt/set3/blob/f900a492437606277c4f574acc1d8bae0b2670e5/A2/mrgSortVShybrid.png)  
+
 ![alt text](https://github.com/vputt/set3/blob/a1c74779e0880630945e90d054783d8c0269df87/A2/hybrid.png)
+
 
