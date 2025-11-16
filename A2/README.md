@@ -206,9 +206,37 @@ public:
 ```cpp
 class SortTester {
 public:
-  double measureMergeSortTime(vector<int>& array, int size);
-  double measureHybridMergeSortTime(vector<int>& array, int size, int threshold);
+  double measureMergeSortTime(vector<int>& array, int size) {
+    const int numTrials = 15;
+    long long totalTime = 0;
+
+    for (int trial = 0; trial < numTrials; ++trial) {
+      vector<int> arrayToSort = array;
+      auto start = std::chrono::high_resolution_clock::now();
+      mergeSort(arrayToSort, 0, arrayToSort.size() - 1);
+      auto elapsed = std::chrono::high_resolution_clock::now() - start;
+      totalTime += std::chrono::duration_cast<std::chrono::microseconds>(elapsed).count();
+    }
+
+    return static_cast<double>(totalTime) / numTrials;
+  }
+
+  double measureHybridMergeSortTime(vector<int>& array, int size, int threshold) {
+    const int numTrials = 15;  // Количество повторных замеров
+    long long totalTime = 0;
+
+    for (int trial = 0; trial < numTrials; ++trial) {
+      vector<int> arrayToSort = array;
+      auto start = std::chrono::high_resolution_clock::now();
+      hybridMergeSort(arrayToSort, 0, arrayToSort.size() - 1, threshold);
+      auto elapsed = std::chrono::high_resolution_clock::now() - start;
+      totalTime += std::chrono::duration_cast<std::chrono::microseconds>(elapsed).count();
+    }
+
+    return static_cast<double>(totalTime) / numTrials;
+  }
 };
+
 ```
 
 - Выполняет 15 повторных измерений
@@ -265,5 +293,6 @@ public:
 ![alt text](https://github.com/vputt/set3/blob/f900a492437606277c4f574acc1d8bae0b2670e5/A2/mrgSortVShybrid.png)  
 
 ![alt text](https://github.com/vputt/set3/blob/a1c74779e0880630945e90d054783d8c0269df87/A2/hybrid.png)
+
 
 
